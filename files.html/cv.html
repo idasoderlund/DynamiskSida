@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link rel="stylesheet" href="/Css/style.css" />
+    <link rel="stylesheet" href="/Css/cv.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lancelot&family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Dosis:wght@200..800&family=Lancelot&family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="BarField">
+      <nav class="Navigation-Menu">
+        <a href="index.html">Home</a>
+        <a class="aboutmeOpen" href="cv.html">About Me</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="kontaktSida.html">Contact Details</a>
+      </nav>
+    </header>
+    <main class="mainFeield">
+      <h1>Cv</h1>
+      <div class="container2">
+        <section class="cvAllContent">
+          <div class="gridContainer">
+            <div class="workExperince">
+              <h2>Anställningar:</h2>
+            </div>
+
+            <div class="education">
+              <h2>Utbildningar:</h2>
+            </div>
+
+            <div class="languages">
+              <h2>Språk:</h2>
+            </div>
+
+            <div class="computerSkills">
+                <h2>Datorkunskaper:</h2>
+            </div>
+
+          </div>  
+        </section>
+      </div>
+    </main>
+
+    </div>
+    <footer class="Footer-Field">
+      <p class="Footer-Links">
+        <a href="http://linkedin.com/in/ida-s%C3%B6derlund-645435217"
+          >Check Out My LinkedIn!</a
+        >
+        <a href="mailto:soderlundida7711@gmail.com">Feel Free To Email Me!</a>
+        <a href="https://github.com/idasoderlund">Check Out My Github!</a>
+      </p>
+    </footer>
+    <script src="/script.js"> //Kolla om det var såhär man hämtade script filen
+        fetch('/data.json') //Kolla om det var såhär man hämtade script filen
+    .then(response => response.json())
+    .then(data => {
+        const workExperienceContainer = document.querySelector('.workExperience');
+        const educationContainer = document.querySelector('.education');
+        const languagesContainer = document.querySelector('.languages');
+        const computerSkillsContainer = document.querySelector('.computerSkills');
+
+        //lägger till arbetslivserfarenhet
+        data.workExperience.forEach(work => {
+            const article = `
+            <arcle>
+                <h4 class="cvTitles">${work.company}<br />${work.dates}</h4>
+                <p>${work.status}>br />${work.position},<br />${work.department}</p>
+                
+            </article>
+            `;
+            workExperienceContainer.innerHTML += article;
+        });
+
+         //lägger till utbildningarna
+        data.education.forEach(edu => {
+            const article = `
+            <article>
+                <h4 class="cvTitles">${edu.program}<br />${edu.dates}</h4>
+                <p>${edu.type} - ${edu.institution}</p>
+            </article>
+            `;
+            workExperienceContainer.innerHTML += article;
+        });
+
+
+         //lägger till språken
+        datadata.languages.forEach(lang => {
+            const article = `
+            <arcle>
+                <h4 class="cvTitles">${pang.language}:<br /></h4>
+                <p>${lang.level}</p>
+                
+            </article>
+            `;
+            languagesContainer.innerHTML += article;
+        });
+
+
+         //lägger till datorkunskap
+        data.workExperience.forEach(work => {
+            const skillsArticle = `
+            <arcle>
+                <p>${data.computerSkills.join('<br />')}</p>
+            </article>
+            `;
+            computerSkillsContainer.innerHTML += skillsArticle;
+        })
+        .catch(error => console.error('Error loading the JSON data:', error));
+    </script> 
+
+    
+
+
+
+
+
+
+
+</body>
+</html>
