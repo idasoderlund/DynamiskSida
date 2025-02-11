@@ -1,0 +1,95 @@
+{
+  "workExperience": [
+    {
+      "company": "Bilia Personbilar AB",
+      "dates": "2023/12/01 - realtid",
+      "position": "Kundtjänstmedarbetare",
+      "department": "2-Line Avancerad-Avdelning",
+      "status": "Fast Anställning (beviljad tjänstledighet pga studier)"
+    },
+
+    {
+      "company": "Bilia Personbilar AB",
+      "dates": "2023/09/05 - 2023/11/30",
+      "position": "Kundtjänstmedarbetare",
+      "department": "1St-Line Bas-avdelning",
+      "status": "Fast anställning"
+    },
+
+    {
+      "company": "Compendium i Mälardalen",
+      "dates": "2023/03-27- 2023/09/24",
+      "position": "B2B/Företagssäljare",
+      "status": "Fast anställning (Jag valde att inte stanna)"
+    },
+
+    {
+      "company": "MatPiraten AB",
+      "dates": "2021/05-12 - 2023/03-24",
+      "position": "Handel, Butikssäljare",
+      "status": "Fast Anställning"
+    },
+
+    {
+      "company": "Rusta",
+      "dates": "2021-2022",
+      "position": "Butikssäljare",
+      "Status": "Deltidsanställning"
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Borås Yrkeshögskola",
+      "dates": "2025-01-13 - 2026-12-31",
+      "program": "Frontend Utveckling",
+      "type": "Yrkeshögskole-utbildning"
+    },
+
+    {
+      "institution": "Västerås Yrkesgymnasium",
+      "dates": "2018-2021",
+      "program": "Undersköterska Akutsjukvårds-inriktning",
+      "type": "Gymansial utbildning"
+    },
+
+    {
+      "institution": "Nybyggeskolan",
+      "dates": "2015-2018",
+      "program": "Högstadium"
+    },
+
+    {
+      "institution": "Dingtuna Skolan",
+      "dates": "2009-2015",
+      "program": "Låg,Mellan-stadium"
+    }
+  ],
+
+  "languages": [
+    {
+      "language": "Svenska",
+      "level": "Utmärkt tal och skrift"
+    },
+
+    {
+      "language": "Finska",
+      "level": "Mycket bra tal"
+    },
+
+    {
+      "language": "Engelska",
+      "level": "Mycket bra tal och skrift"
+    }
+  ],
+
+  "computerSkills": [
+    "Windows- miljö",
+    "Excel",
+    "Word",
+    "Sociala Medier",
+    "Mail/Chatt (Inbox, Gmail, Outlook)",
+    "Storeoffice (Handel)",
+    "DMS-System (Kobra, Tacdis Webb/Greenline)"
+  ]
+}
