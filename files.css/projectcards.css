@@ -1,0 +1,86 @@
+.projectCardContent h1 {
+  color: #780c28;
+  font-family: "lancelot";
+  font-size: 50px;
+  text-decoration: underline #780c28;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.projectdivs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.projectimages {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.projectCardContent h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: "lancelot";
+  text-transform: capitalize;
+  font-size: 40px;
+  color: #780c28;
+  text-decoration: underline;
+}
+.projectCardContent p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "dosis";
+  padding-bottom: 3em;
+}
+.project-pic2 {
+  box-sizing: border-box;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+  max-height: 15%;
+  max-width: 15%;
+  object-fit: cover;
+  border-radius: 60px;
+  margin-left: 30px;
+}
+.project-pic1 {
+  box-sizing: border-box;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+  max-height: 30%;
+  max-width: 30%;
+  object-fit: cover;
+  border-radius: 60px;
+  margin-left: 30px;
+}
+.projectdivs {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.analysingLinks {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.analysingLinks h4 {
+  text-align: center;
+}
+.analysingLinks a {
+  margin-left: 5px;
+}

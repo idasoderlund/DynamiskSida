@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #fbfbfb;
+}
+.AllContent {
+  box-sizing: border-box;
+  height: 100vh;
+}
+.BarField {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f5f5f5;
+}
+.Navigation-Menu {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: #780c28;
+  font-family: "Quintessential";
+}
+.homeOpen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #780c28;
+  color: #fff;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .Navigation-Menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .Navigation-Menu {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+.Main-Field {
+  box-sizing: border-box;
+}
+.Profile-Row {
+  padding: 0 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 50px;
+  flex-direction: row;
+  margin-top: 3em;
+}
+@media (max-width: 600px) {
+  .Profile-Row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.profile-pic {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+.profile-pic img {
+  box-sizing: border-box;
+  flex: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  border-radius: 60px;
+  margin-left: 20px;
+}
+@media (min-width: 1px) and (max-width: 767px) {
+  .profile-pic img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .AboutMe-Area {
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .Profile-Row {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1920px) {
+  .profile-pic img {
+    width: 100%;
+    height: auto;
+    max-height: 900px;
+    margin: 0;
+  }
+}
+.AboutMe-Area {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: dotted;
+  border-radius: 20px;
+  border-color: #780c28;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 30px;
+}
+.profile-Rubric {
+  display: flex;
+  margin: 0;
+  font-family: "lancelot";
+  text-transform: capitalize;
+  font-size: 40px;
+  color: #780c28;
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .profile-Rubric {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .AboutMe-Area p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0;
+  }
+}
+.AboutMe-Area p {
+  margin-top: 1em;
+  padding-top: 1em;
+  font-family: "dosis";
+}
+.AboutMe-Area a {
+  margin-top: 1em;
+  font-family: "dosis";
+  color: #780c28;
+  padding-top: 20px;
+}
+#projectsRubric {
+  font-family: "lancelot";
+  text-transform: capitalize;
+  font-size: 40px;
+  color: #780c28;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  text-decoration: underline;
+}
+.projectTitles {
+  width: 100%;
+  color: #780c28;
+}
+.Container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.ProjectCards {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /*lade till för att flytta uppp rubrik i PC*/
+  justify-content: flex-start; /* har egentligen center*/
+  align-items: flex-start; /*lade till fär att ustera inehål till väsnter rubrik i PC*/
+  position: relative; /* placerar text ovanpå bild*/
+  overflow: hidden; /* döljer överflöd av bild*/
+  flex-direction: column;
+  border-radius: 20px;
+  margin-bottom: 3em;
+  margin-left: 20px;
+  height: 50vh;
+  width: 90%;
+  background-color: plum;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3), 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+.projectBackground {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* gör att bild täcker hela området*/
+  position: absolute; /* gör en absolut posiitonering av bild*/
+  top: 0;
+  left: 0;
+  z-index: 1; /* gör så bilden ligger bakom text*/
+}
+h3,
+.projectLinks {
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2; /* gör så texten ligger ovanpå bild*/
+  padding: 10px; /* utrymme mellan text och kant*/
+  background-color: #f5f5f5;
+  width: 140%;
+}
+.projectLinks {
+  color: #780c28;
+}
+@media (max-width: 768px) {
+  .Container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.Footer-Field {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #f5f5f5;
+  font-family: "Quintessential";
+}
+.Footer-Links {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: #780c28;
+}
+.Footer-Links a {
+  margin: 0 30px;
+}
+@media (max-width: 768px) {
+  .Footer-Links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .Footer-Links {
+    grid-template-columns: 1fr;
+  }
+}

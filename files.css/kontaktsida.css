@@ -1,0 +1,69 @@
+.contactOpen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #780c28;
+  color: #fff;
+  margin-right: 20px;
+}
+.contactField {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex: 1;
+  height: auto; /*hade 90%*/
+  padding: 10px; /*hade inte alls*/
+}
+@media (max-width: 600px) {
+  .contantTexts h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .contantTexts h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .contantTexts p {
+    font-size: 16px;
+    text-align: center;
+    max-width: 90%;
+    word-wrap: break-word;
+  }
+
+  .contantTexts div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.contantTexts h1 {
+  color: #780c28;
+  font-family: "lancelot";
+  font-size: 50px;
+  text-decoration: underline #780c28;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.contantTexts h2 {
+  color: #000;
+  font-family: "dosis";
+  font-size: 25px;
+  margin-top: 30px;
+  font-weight: 300;
+}
+.contantTexts p {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: #000;
+  font-family: "dosis";
+  margin-top: 30px;
+}

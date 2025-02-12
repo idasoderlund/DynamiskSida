@@ -1,0 +1,114 @@
+.aboutmeOpen {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #780c28;
+  color: #fff;
+  margin-right: 20px;
+}
+.mainFeield {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  border: dotted #780c28;
+  border-radius: 20px;
+  margin-left: 70px;
+  margin-right: 50px;
+}
+.container2 {
+  padding: 20px;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.cvAllContent {
+  box-sizing: border-box;
+  gap: 40px;
+  display: grid;
+  font-family: "lancelot";
+  text-transform: capitalize;
+  color: #780c28;
+  margin-bottom: 40px;
+}
+@media (max-width: 600px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+
+  .cvAllContent h2 {
+    font-size: 24px;
+  }
+
+  .cvAllContent p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+@media (min-width: 600px) and (max-width: 1920px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+  }
+
+  .cvAllContent h2 {
+    font-size: 24px;
+  }
+
+  .cvAllContent p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+.workExperince,
+.education,
+.languages,
+.computerSkills,
+.driversLicens,
+.references {
+  width: 100%;
+  box-sizing: border-box;
+}
+.cvAllContent h2 {
+  grid-column: span 2;
+  font-family: "lancelot";
+  text-transform: capitalize;
+  color: #780c28;
+  margin: 20px;
+}
+.mainFeield h1 {
+  color: #780c28;
+  font-family: "lancelot";
+  font-size: 50px;
+  text-decoration: underline #780c28;
+}
+.cvCategory {
+  font-family: "lancelot";
+  color: #780c28;
+}
+.cvTitles {
+  color: #780c28;
+  font-family: "dosis";
+}
+.workExperince,
+.education,
+.languages,
+.computerSkills,
+.driversLicens,
+.references {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
