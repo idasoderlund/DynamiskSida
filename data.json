@@ -12,7 +12,7 @@
       "company": "Bilia Personbilar AB",
       "dates": "2023/09/05 - 2023/11/30",
       "position": "Kundtjänstmedarbetare",
-      "department": "1St-Line Bas-avdelning",
+      "department": "1-Line Bas-Avdelning",
       "status": "Fast anställning"
     },
 
@@ -20,6 +20,7 @@
       "company": "Compendium i Mälardalen",
       "dates": "2023/03-27- 2023/09/24",
       "position": "B2B/Företagssäljare",
+      "department": "Säljkonsult-avdelning",
       "status": "Fast anställning (Jag valde att inte stanna)"
     },
 
@@ -27,6 +28,7 @@
       "company": "MatPiraten AB",
       "dates": "2021/05-12 - 2023/03-24",
       "position": "Handel, Butikssäljare",
+      "department": "Jour,Deli,Kassa,Golv-Avdelning",
       "status": "Fast Anställning"
     },
 
@@ -34,6 +36,7 @@
       "company": "Rusta",
       "dates": "2021-2022",
       "position": "Butikssäljare",
+      "department": "Kassa,Golv-Avdelning",
       "status": "Deltidsanställning"
     }
   ],
@@ -56,13 +59,15 @@
     {
       "institution": "Nybyggeskolan",
       "dates": "2015-2018",
-      "program": "Högstadium"
+      "program": "Högstadium",
+      "type": "Grundskoleutbildning"
     },
 
     {
       "institution": "Dingtuna Skolan",
       "dates": "2009-2015",
-      "program": "Låg,Mellan-stadium"
+      "program": "Låg,Mellan-stadium",
+      "type": "Grundskoleutbildning"
     }
   ],
 

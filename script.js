@@ -81,7 +81,7 @@ function initSlideshow() {
     showSlides((slideIndex += n));
   };
 
-  wondow.currentSlide = function (n) {
+  window.currentSlide = function (n) {
     showSlides((slideIndex = n));
   };
 
