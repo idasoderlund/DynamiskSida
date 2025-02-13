@@ -131,6 +131,7 @@
   max-width: 100%;
   margin: auto;
   text-align: center;
+  overflow: hidden;
 }
 
 img {
@@ -152,14 +153,16 @@ img {
   border-radius: 0 3px 3px 0;
   user-select: none;
   background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 .prev {
-  left: 0;
+  left: 283px;
 }
 
 .next {
-  right: 0;
+  right: 283px;
   border-radius: 3px 0 0 3px;
 }
 /*NÅGOT ÄR FEL I PRETTIER MED DENNA SIDA SÅ KOLLA UPP DET*/
