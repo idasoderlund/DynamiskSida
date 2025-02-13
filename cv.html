@@ -47,16 +47,84 @@
               <h2>Utbildningar:</h2>
             </div>
 
+            <!--SKAPA EN TOGGLE SOM INTEAKTIVT JS ELEMENT-->
             <div class="languages">
               <h2>Språk:</h2>
             </div>
 
+            <section id="interactiveToggle">
+              <h2>Interaktiv Togglefunktion</h2>
+              <button id="toggleLanguages">Visa/Dölj språkkunskaper</button>
+              <div id="languageList" style="display: none">
+                <ul>
+                  <li>Svenska: Utmärkt tal och skrift</li>
+                  <li>Finska: Mycket bra tal</li>
+                  <li>Engelska: Mycket bra tal och skrift</li>
+                </ul>
+              </div>
+            </section>
+            <!------------------------------------------------------------>
             <div class="computerSkills">
               <h2>Datorkunskaper:</h2>
             </div>
           </div>
         </section>
       </div>
+      <!--LÄGG IN JS FUNKTION- BILDSPEL-->
+      <section id="slideshow">
+        <h2>Bildspel</h2>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <!--LÄGG IN BILD 1-->
+            <img
+              src="https://cdn.pixabay.com/photo/2013/04/03/21/25/flower-100263_1280.jpg"
+              style="width: 50%"
+            />
+          </div>
+
+          <div class="mySlides fade">
+            <!--LÄGG IN BILD 2-->
+            <img
+              src="https://cdn.pixabay.com/photo/2022/04/02/17/18/purple-flower-7107429_1280.jpg"
+              style="width: 50%"
+            />
+          </div>
+
+          <div class="mySlides fade">
+            <!--LÄGG IN BILD 3-->
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/06/08/32/malva-8297759_1280.jpg"
+              style="width: 50%"
+            />
+          </div>
+
+          <div class="mySlides fade">
+            <!--LÄGG IN BILD 4-->
+            <img
+              src="https://cdn.pixabay.com/photo/2023/05/13/21/07/flower-7991447_1280.jpg"
+              style="width: 50%"
+            />
+          </div>
+
+          <div class="mySlides fade">
+            <!--LÄGG IN BILD 5-->
+            <img
+              src="https://cdn.pixabay.com/photo/2015/10/09/00/55/lotus-978659_1280.jpg"
+              style="width: 50%"
+            />
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+      </section>
     </main>
     <footer class="Footer-Field">
       <p class="Footer-Links">
