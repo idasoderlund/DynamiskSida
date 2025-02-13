@@ -48,17 +48,6 @@ function fetchData() {
       });
       languagesContainer.innerHTML = languagesHTML;
 
-      //Lägger in JS för min interaktiva togglefunktion här, kolla upp vart i filen den ska placeras egentligen
-
-      document.getElementById("toggleLanguages").onclick = function () {
-        let languageList = document.getElementById("languageList");
-        if (languageList.style.display === "none") {
-          languageList.style.display = "block";
-        } else {
-          languageList.style.display = "none";
-        }
-      };
-      //--------------------------------------------------------------------------
       //lägger till datorkunskap
       const skillsArticle = `
             <article>
@@ -66,20 +55,35 @@ function fetchData() {
             </article>
             `;
       computerSkillsContainer.innerHTML = skillsArticle;
+
+      initToggleLanguages();
+      initSlideshow();
     })
     .catch((error) => console.error("Error loading the JSON data:", error));
+}
 
-  //LÄGGER IN BILDSPELET HÄR ME KOLLA UPP VART I JS FILEN SOM DEN SKA VARA PLACERAD EGENTLIGEN
+function initToggleLanguages() {
+  document
+    .getElementById("toggleLanguages")
+    .addEventListener("click", function () {
+      let languageList = document.getElementById("languageList");
+      languageList.style.display =
+        languageList.style.display === "none" ? "block" : "none";
+    });
+}
+
+//LÄGGER IN BILDSPELET HÄR ME KOLLA UPP VART I JS FILEN SOM DEN SKA VARA PLACERAD EGENTLIGEN
+function initSlideshow() {
   let slideIndex = 1;
   showSlides(slideIndex);
 
-  function plusSlides(n) {
+  window.plusSlides = function (n) {
     showSlides((slideIndex += n));
-  }
+  };
 
-  function currentSlide(n) {
+  wondow.currentSlide = function (n) {
     showSlides((slideIndex = n));
-  }
+  };
 
   function showSlides(n) {
     let i;
@@ -101,7 +105,5 @@ function fetchData() {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
   }
-  //-------------------------------------------------------------------
 }
-
 document.addEventListener("DOMContentLoaded", fetchData);
