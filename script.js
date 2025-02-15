@@ -49,6 +49,7 @@ function fetchData() {
       languagesContainer.innerHTML = languagesHTML;
 
       //LÄGG IN TOGGLERUTA HÄR
+      //Denna kod är egenskriven för att dölja samt visa information gällande språkkunskap i cv.
 
       let toggleHTML = `
       <section id="interactiveToggle">
@@ -89,6 +90,9 @@ function fetchData() {
 }
 
 //LÄGGER IN BILDSPELET HÄR ME KOLLA UPP VART I JS FILEN SOM DEN SKA VARA PLACERAD EGENTLIGEN
+//Denna kod är inspirerad av extern kod. Lösningen som min kod baseras på är inspirerad av W3Schools.
+//källan: https://www.w3schools.com/howto/howto_js_slideshow.asp
+
 function initSlideshow() {
   let slideIndex = 1;
   showSlides(slideIndex);
