@@ -48,6 +48,32 @@ function fetchData() {
       });
       languagesContainer.innerHTML = languagesHTML;
 
+      //LÄGG IN TOGGLERUTA HÄR
+
+      let toggleHTML = `
+      <section id="interactiveToggle">
+        <button id="toggleLanguages">Se SpråkNivå</button>
+        <div id="languageList" style="display: none">
+        <ul>
+          <li>Svenska: Utmärkt tal och skrift</li>
+          <li>Finska: Mycket bra tal</li>
+          <li>Engelska: Mycket bra tal och skrift</li>
+        </ul>
+        </div>
+      </section>
+      `;
+      languagesContainer.innerHTML += toggleHTML;
+
+      function initToggleLanguages() {
+        document
+          .getElementById("toggleLanguages")
+          .addEventListener("click", function () {
+            let languageList = document.getElementById("languageList");
+            languageList.style.display =
+              languageList.style.display === "none" ? "block" : "none";
+          });
+      }
+
       //lägger till datorkunskap
       const skillsArticle = `
             <article>
@@ -60,16 +86,6 @@ function fetchData() {
       initSlideshow();
     })
     .catch((error) => console.error("Error loading the JSON data:", error));
-}
-
-function initToggleLanguages() {
-  document
-    .getElementById("toggleLanguages")
-    .addEventListener("click", function () {
-      let languageList = document.getElementById("languageList");
-      languageList.style.display =
-        languageList.style.display === "none" ? "block" : "none";
-    });
 }
 
 //LÄGGER IN BILDSPELET HÄR ME KOLLA UPP VART I JS FILEN SOM DEN SKA VARA PLACERAD EGENTLIGEN
