@@ -71,23 +71,6 @@
     }
   ],
 
-  "languages": [
-    {
-      "language": "Svenska",
-      "level": "Utmärkt tal och skrift"
-    },
-
-    {
-      "language": "Finska",
-      "level": "Mycket bra tal"
-    },
-
-    {
-      "language": "Engelska",
-      "level": "Mycket bra tal och skrift"
-    }
-  ],
-
   "computerSkills": [
     "windows-miljö",
     "Word",

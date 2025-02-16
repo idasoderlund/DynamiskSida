@@ -9,11 +9,10 @@ function fetchData() {
     .then((data) => {
       const workExperienceContainer = document.querySelector(".workExperience");
       const educationContainer = document.querySelector(".education");
-      const languagesContainer = document.querySelector(".languages");
       const computerSkillsContainer = document.querySelector(".computerSkills");
 
       //lägger till arbetslivserfarenhet
-      let workExperienceHTML = "";
+      let workExperienceHTML = "<h2>Anställningar:</h2>";
       data.workExperience.forEach((work) => {
         workExperienceHTML += `
             <article>
@@ -25,7 +24,7 @@ function fetchData() {
       workExperienceContainer.innerHTML = workExperienceHTML;
 
       //lägger till utbildningarna
-      let educationHTML = "";
+      let educationHTML = "<h2>Utbildningar:</h2>";
       data.education.forEach((edu) => {
         educationHTML += `
             <article>
@@ -36,58 +35,33 @@ function fetchData() {
       });
       educationContainer.innerHTML = educationHTML;
 
-      //lägger till språken
-      let languagesHTML = "";
-      data.languages.forEach((lang) => {
-        languagesHTML += `
-            <article>
-                <h4 class="cvTitles">${lang.language}:<br /></h4>
-                <p>${lang.level}</p> 
-            </article>
-            `;
-      });
-      languagesContainer.innerHTML = languagesHTML;
-
-      //LÄGG IN TOGGLERUTA HÄR
-      //Denna kod är egenskriven för att dölja samt visa information gällande språkkunskap i cv.
-
-      let toggleHTML = `
-      <section id="interactiveToggle">
-        <button id="toggleLanguages">Se SpråkNivå</button>
-        <div id="languageList" style="display: none">
-        <ul>
-          <li>Svenska: Utmärkt tal och skrift</li>
-          <li>Finska: Mycket bra tal</li>
-          <li>Engelska: Mycket bra tal och skrift</li>
-        </ul>
-        </div>
-      </section>
-      `;
-      languagesContainer.innerHTML += toggleHTML;
-
-      function initToggleLanguages() {
-        document
-          .getElementById("toggleLanguages")
-          .addEventListener("click", function () {
-            let languageList = document.getElementById("languageList");
-            languageList.style.display =
-              languageList.style.display === "none" ? "block" : "none";
-          });
-      }
-
       //lägger till datorkunskap
-      const skillsArticle = `
-            <article>
-                <p>${data.computerSkills.join("<br />")}</p>
-            </article>
-            `;
-      computerSkillsContainer.innerHTML = skillsArticle;
+      let skillsHTML = "<h2>Datorkunskaper:</h2>";
+      skillsHTML += `<article><p>${data.computerSkills.join("<br />")}</p>
+            </article>`;
+      computerSkillsContainer.innerHTML = skillsHTML;
 
-      initToggleLanguages();
       initSlideshow();
     })
     .catch((error) => console.error("Error loading the JSON data:", error));
 }
+//LÄGG IN TOGGLERUTA HÄR
+//Denna kod är egenskriven för att dölja samt visa information gällande språkkunskap i cv.
+function initToggleLanguages() {
+  console.log("Initializing toggle for languages");
+  document
+    .getElementById("toggleLanguages")
+    .addEventListener("click", function () {
+      let languageList = document.getElementById("languageList");
+      languageList.style.display =
+        languageList.style.display === "none" ? "block" : "none";
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetchData();
+  initToggleLanguages();
+});
 
 //LÄGGER IN BILDSPELET HÄR ME KOLLA UPP VART I JS FILEN SOM DEN SKA VARA PLACERAD EGENTLIGEN
 //Denna kod är inspirerad av extern kod. Lösningen som min kod baseras på är inspirerad av W3Schools.
