@@ -114,6 +114,14 @@
 }
 
 /*------------------------------------------------------------------*/
+#interactiveToggle button {
+  margin-left: 20px;
+  background-color: #780c28;
+  color: #fff;
+  border-radius: 40px;
+  padding: 5px;
+}
+
 .slideshow {
   display: flex;
   justify-content: center;
