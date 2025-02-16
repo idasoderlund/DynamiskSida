@@ -28,13 +28,27 @@
     <div class="projectCardContent">
       <h1>Project: Lorem Epsum Texts</h1>
       <div class="projectimages">
-        <img
-          src="https://cdn.pixabay.com/photo/2022/10/17/10/41/river-7527311_1280.jpg"
-          class="project-pic1"
-          height="20%"
-          width="30%"
-          alt="View"
-        />
+        <picture class="project-pic1">
+          <source
+            srcset="
+              https://cdn.pixabay.com/photo/2022/10/17/10/41/river-7527311_1280.avif
+            "
+            type="image/avif"
+          />
+          <source
+            srcset="
+              https://cdn.pixabay.com/photo/2022/10/17/10/41/river-7527311_1280.webp
+            "
+            type="image/webp"
+          />
+          <img
+            src="https://cdn.pixabay.com/photo/2022/10/17/10/41/river-7527311_1280.jpg"
+            loading="lazy"
+            height="20%"
+            width="30%"
+            alt="View"
+          />
+        </picture>
       </div>
       <div class="projectdivs">
         <h2>Description</h2>

@@ -28,13 +28,17 @@
     <div class="projectCardContent">
       <h1>Project: Lorem Epsum Texts</h1>
       <div class="projectimages">
-        <img
-          src="https://cdn.pixabay.com/photo/2023/01/24/15/11/nave-7741260_1280.jpg"
-          height="10%"
-          width="20%"
-          class="project-pic2"
-          alt="Building"
-        />
+        <picture class="project-pic2">
+          <source srcset="building.avif" type="image/avif" />
+          <source srcset="building.webp" type="image/webp" />
+          <img
+            src="building.jpg"
+            loading="lazy"
+            height="10%"
+            width="20%"
+            alt="Building"
+          />
+        </picture>
       </div>
       <div class="projectdivs">
         <h2>Description</h2>
