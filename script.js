@@ -47,20 +47,27 @@ function fetchData() {
 }
 //LÄGG IN TOGGLERUTA HÄR
 //Denna kod är egenskriven för att dölja samt visa information gällande språkkunskap i cv.
-function initToggleLanguages() {
-  console.log("Initializing toggle for languages");
-  const toggleButton = document.getElementById("toggleLanguages");
-  if (!toggleButton) {
-    console.error("Toggle button not found!");
-    return;
-  }
-  toggleButton.addEventListener("click", function () {
-    let languageList = document.getElementById("languageList");
-    languageList.style.display =
-      languageList.style.display === "none" ? "block" : "none";
-  });
-}
 
+function initToggleLanguages() {
+  const toggleButton = document.getElementById("toggleLanguages");
+
+  // Kontrollera om toggleButton finns innan vi försöker registrera en event listener
+  if (toggleButton) {
+    console.log("Toggle button found, initializing toggle for languages.");
+
+    toggleButton.addEventListener("click", function () {
+      let languageList = document.getElementById("languageList");
+      if (languageList) {
+        languageList.style.display =
+          languageList.style.display === "none" ? "block" : "none";
+      } else {
+        console.warn("Language list not found");
+      }
+    });
+  } else {
+    console.warn("Toggle button is not found, skipping toggle initialization.");
+  }
+}
 document.addEventListener("DOMContentLoaded", function () {
   initToggleLanguages();
   fetchData();
