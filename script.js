@@ -1,5 +1,5 @@
 function fetchData() {
-  fetch("/data.json") //Kolla om det var såhär man hämtade script filen. står att om filerna ligger i samma mapp så ska man ange utan snestreck
+  fetch("./data.json") //Kolla om det var såhär man hämtade script filen. står att om filerna ligger i samma mapp så ska man ange utan snestreck
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
