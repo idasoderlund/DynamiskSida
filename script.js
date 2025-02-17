@@ -59,14 +59,6 @@ function initToggleLanguages() {
     languageList.style.display =
       languageList.style.display === "none" ? "block" : "none";
   });
-
-  /*document
-    .getElementById("toggleLanguages")
-    .addEventListener("click", function () {
-      let languageList = document.getElementById("languageList");
-      languageList.style.display =
-        languageList.style.display === "none" ? "block" : "none";
-    });*/
 }
 
 document.addEventListener("DOMContentLoaded", function () {
