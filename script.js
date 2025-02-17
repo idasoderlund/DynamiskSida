@@ -49,18 +49,29 @@ function fetchData() {
 //Denna kod är egenskriven för att dölja samt visa information gällande språkkunskap i cv.
 function initToggleLanguages() {
   console.log("Initializing toggle for languages");
-  document
+  const toggleButton = document.getElementById("toggleLanguages");
+  if (!toggleButton) {
+    console.error("Toggle button not found!");
+    return;
+  }
+  toggleButton.addEventListener("click", function () {
+    let languageList = document.getElementById("languageList");
+    languageList.style.display =
+      languageList.style.display === "none" ? "block" : "none";
+  });
+
+  /*document
     .getElementById("toggleLanguages")
     .addEventListener("click", function () {
       let languageList = document.getElementById("languageList");
       languageList.style.display =
         languageList.style.display === "none" ? "block" : "none";
-    });
+    });*/
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetchData();
   initToggleLanguages();
+  fetchData();
 });
 
 //LÄGGER IN BILDSPELET HÄR ME KOLLA UPP VART I JS FILEN SOM DEN SKA VARA PLACERAD EGENTLIGEN
@@ -100,4 +111,3 @@ function initSlideshow() {
     dots[slideIndex - 1].className += " active";
   }
 }
-document.addEventListener("DOMContentLoaded", fetchData);
