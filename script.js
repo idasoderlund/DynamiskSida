@@ -12,35 +12,40 @@ function fetchData() {
       const computerSkillsContainer = document.querySelector(".computerSkills");
 
       //lägger till arbetslivserfarenhet
-      let workExperienceHTML = "<h2>Anställningar:</h2>";
-      data.workExperience.forEach((work) => {
-        workExperienceHTML += `
+      if (workExperienceContainer) {
+        let workExperienceHTML = "<h2>Anställningar:</h2>";
+        data.workExperience.forEach((work) => {
+          workExperienceHTML += `
             <article>
                 <h4 class="cvTitles">${work.company}<br />${work.dates}</h4>
                 <p>${work.status}<br />${work.position},<br />${work.department}</p>
             </article>
             `;
-      });
-      workExperienceContainer.innerHTML = workExperienceHTML;
+        });
+        workExperienceContainer.innerHTML = workExperienceHTML;
+      }
 
       //lägger till utbildningarna
-      let educationHTML = "<h2>Utbildningar:</h2>";
-      data.education.forEach((edu) => {
-        educationHTML += `
+      if (educationContainer) {
+        let educationHTML = "<h2>Utbildningar:</h2>";
+        data.education.forEach((edu) => {
+          educationHTML += `
             <article>
                 <h4 class="cvTitles">${edu.program}<br />${edu.dates}</h4>
                 <p>${edu.type} - ${edu.institution}</p>
             </article>
             `;
-      });
-      educationContainer.innerHTML = educationHTML;
+        });
+        educationContainer.innerHTML = educationHTML;
+      }
 
       //lägger till datorkunskap
-      let skillsHTML = "<h2>Datorkunskaper:</h2>";
-      skillsHTML += `<article><p>${data.computerSkills.join("<br />")}</p>
+      if (computerSkillsContainer) {
+        let skillsHTML = "<h2>Datorkunskaper:</h2>";
+        skillsHTML += `<article><p>${data.computerSkills.join("<br />")}</p>
             </article>`;
-      computerSkillsContainer.innerHTML = skillsHTML;
-
+        computerSkillsContainer.innerHTML = skillsHTML;
+      }
       initSlideshow();
     })
     .catch((error) => console.error("Error loading the JSON data:", error));
@@ -106,7 +111,9 @@ function initSlideshow() {
       dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    if (slides[slideIndex - 1]) {
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
   }
 }
