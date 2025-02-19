@@ -157,6 +157,7 @@ source {
   font-family: "dosis";
   color: #780c28;
   padding-top: 20px;
+  z-index: 90;
 }
 #projectsRubric {
   font-family: "lancelot";
