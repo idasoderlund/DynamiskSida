@@ -1,5 +1,5 @@
 function fetchData() {
-  fetch("./data.json") //Kolla om det var såhär man hämtade script filen. står att om filerna ligger i samma mapp så ska man ange utan snestreck
+  fetch("./data.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -11,7 +11,6 @@ function fetchData() {
       const educationContainer = document.querySelector(".education");
       const computerSkillsContainer = document.querySelector(".computerSkills");
 
-      //lägger till arbetslivserfarenhet
       if (workExperienceContainer) {
         let workExperienceHTML = "<h2>Anställningar:</h2>";
         data.workExperience.forEach((work) => {
@@ -25,7 +24,6 @@ function fetchData() {
         workExperienceContainer.innerHTML = workExperienceHTML;
       }
 
-      //lägger till utbildningarna
       if (educationContainer) {
         let educationHTML = "<h2>Utbildningar:</h2>";
         data.education.forEach((edu) => {
@@ -39,7 +37,6 @@ function fetchData() {
         educationContainer.innerHTML = educationHTML;
       }
 
-      //lägger till datorkunskap
       if (computerSkillsContainer) {
         let skillsHTML = "<h2>Datorkunskaper:</h2>";
         skillsHTML += `<article><p>${data.computerSkills.join("<br />")}</p>
@@ -50,13 +47,9 @@ function fetchData() {
     })
     .catch((error) => console.error("Error loading the JSON data:", error));
 }
-//LÄGG IN TOGGLERUTA HÄR
 //Denna kod är egenskriven för att dölja samt visa information gällande språkkunskap i cv.
-
 function initToggleLanguages() {
   const toggleButton = document.getElementById("toggleLanguages");
-
-  // Kontrollera om toggleButton finns innan vi försöker registrera en event listener
   if (toggleButton) {
     console.log("Toggle button found, initializing toggle for languages.");
 
@@ -78,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchData();
 });
 
-//LÄGGER IN BILDSPELET HÄR ME KOLLA UPP VART I JS FILEN SOM DEN SKA VARA PLACERAD EGENTLIGEN
 //Denna kod är inspirerad av extern kod. Lösningen som min kod baseras på är inspirerad av W3Schools.
 //källan: https://www.w3schools.com/howto/howto_js_slideshow.asp
 

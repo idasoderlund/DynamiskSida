@@ -112,8 +112,6 @@
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-/*------------------------------------------------------------------*/
 #interactiveToggleElement button {
   margin-left: 20px;
   background-color: #780c28;
@@ -121,13 +119,11 @@
   border-radius: 40px;
   padding: 5px;
 }
-
 .slideshow {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 #slideshowRubric {
   text-align: center;
   margin-bottom: 10px;
@@ -136,7 +132,6 @@
   font-size: 35px;
   text-decoration: underline;
 }
-
 .slideshowContainer {
   position: relative;
   max-width: 100%;
@@ -144,12 +139,10 @@
   text-align: center;
   overflow: hidden;
 }
-
 img {
   width: 100%;
   max-width: 100%;
 }
-
 .prev,
 .next {
   cursor: pointer;
@@ -167,13 +160,10 @@ img {
   transform: translateY(-50%);
   z-index: 10;
 }
-
 .prev {
   left: 283px;
 }
-
 .next {
   right: 283px;
   border-radius: 3px 0 0 3px;
 }
-/*NÅGOT ÄR FEL I PRETTIER MED DENNA SIDA SÅ KOLLA UPP DET*/

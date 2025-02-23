@@ -24,8 +24,7 @@ body {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  /*height: auto;*/ /*hade 90%*/
-  padding: 10px; /*hade inte alls*/
+  padding: 10px;
 }
 @media (max-width: 600px) {
   .contantTexts h1 {
